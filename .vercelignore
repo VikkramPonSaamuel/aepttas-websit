@@ -1,4 +1,2 @@
-server.js
 .env
-.env.example
 *.zip

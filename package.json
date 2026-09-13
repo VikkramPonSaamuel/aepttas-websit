@@ -1,0 +1,10 @@
+{
+  "name": "aepttas-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aepttas Shield Website with Interactive Features and Gemini AI Chatbot",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
