@@ -3,8 +3,19 @@ const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+// Simple .env parser
+if (fs.existsSync(path.join(__dirname, '.env'))) {
+  const envConfig = fs.readFileSync(path.join(__dirname, '.env'), 'utf8');
+  envConfig.split('\n').forEach(line => {
+    const [key, ...val] = line.split('=');
+    if (key && val.length) {
+      process.env[key.trim()] = val.join('=').trim();
+    }
+  });
+}
+
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const PORT = 3000;
 
 const MIME_TYPES = {
   '.html': 'text/html',
