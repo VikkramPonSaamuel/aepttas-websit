@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Aepttas Shield Website with Interactive Features and Gemini AI Chatbot",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo Build complete"
   }
 }
